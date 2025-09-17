@@ -1,28 +1,21 @@
 ## 📄 `README.md`
 
-```markdown
-# Ubuntu Image Fetcher
+# 🌍 Ubuntu Image Fetcher
 
 > *"I am because we are"* — Ubuntu philosophy  
 
 This project is part of the **Ubuntu_Requests** assignment.  
 It’s a Python tool that respectfully connects to the wider web community, fetches images, and organizes them for later sharing.  
 
-The script demonstrates Ubuntu values in programming:
-- **Community** → connects to the global web, sharing in its resources  
-- **Respect** → handles errors gracefully, no crashes  
-- **Sharing** → saves images neatly in `Fetched_Images/`  
-- **Practicality** → a simple, useful tool for collecting and organizing images  
-
 ---
 
 ## ✨ Features
-- Fetches images from one or more URLs (comma-separated input)  
-- Creates a `Fetched_Images/` folder automatically  
-- Prevents saving duplicate images (using SHA256 hash comparison)  
-- Checks HTTP headers (only saves files if they are actual images)  
-- Graceful error handling for connection issues  
-- Polite `User-Agent` for respectful requests  
+- 📥 Download one or more images from given URLs (comma-separated input)  
+- 🗂️ Automatically creates a `Fetched_Images/` folder  
+- 🔒 Skips duplicate images (using SHA256 hash checks)  
+- ✅ Checks HTTP headers to ensure only images are saved  
+- 🛡️ Graceful error handling for failed connections  
+- 🙏 Uses a polite `User-Agent` for respectful requests  
 
 ---
 
@@ -39,25 +32,40 @@ Ubuntu\_Requests/
 ---
 
 ## ⚙️ Requirements
-- Python 3.7+  
-- `requests` library  
+You need:  
+- **Python 3.7+** installed  
+- The `requests` library  
 
-Install dependencies:
+Install `requests` with:
 ```bash
 pip install requests
 ````
+
+If you’re using **pip3**:
+
+```bash
+pip3 install requests
+```
 
 ---
 
 ## ▶️ Usage
 
-Run the script:
+Run the script from your terminal:
 
 ```bash
 python ubuntu_fetcher.py
 ```
 
-Example run:
+Or (depending on your setup):
+
+```bash
+python3 ubuntu_fetcher.py
+```
+
+When prompted, enter one or more image URLs, separated by commas.
+
+### Example Run
 
 ```
 Welcome to the Ubuntu Image Fetcher
@@ -76,38 +84,44 @@ Connection strengthened. Community enriched.
 
 ---
 
-## 🌍 Example URLs
+## 🌍 Example URLs to Try
 
-Here are some safe images you can test with:
+Here are some safe image links you can test with:
 
-* Ubuntu wallpaper → `https://assets.ubuntu.com/v1/8dd99b80-suru-dark.png`
-* Python logo → `https://www.python.org/static/community_logos/python-logo.png`
-* NASA APOD sample → `https://apod.nasa.gov/apod/image/1901/IC405_Abolfath_3952.jpg`
-* Placeholder image → `https://via.placeholder.com/300.png`
+```text
+https://assets.ubuntu.com/v1/8dd99b80-suru-dark.png
+https://www.python.org/static/community_logos/python-logo.png
+https://apod.nasa.gov/apod/image/1901/IC405_Abolfath_3952.jpg
+https://via.placeholder.com/300.png
+```
+
+You can copy and paste multiple, separated by commas:
+
+```text
+https://assets.ubuntu.com/v1/8dd99b80-suru-dark.png, https://www.python.org/static/community_logos/python-logo.png
+```
 
 ---
 
 ## 🔒 Safety Precautions
 
-* Only saves files if the server responds with `Content-Type: image/...`
-* Respects timeouts and connection failures without crashing
-* Skips duplicates to save space
-* Uses a polite `User-Agent`
+* Saves only if the response has `Content-Type: image/...`
+* Skips duplicates by comparing file hashes
+* Respects connection timeouts
+* Handles errors gracefully instead of crashing
 
 ---
 
 ## 📜 Ubuntu Principles in Action
 
-* **Community** → downloading from the web connects us to the global community
-* **Respect** → errors are handled gracefully, respecting both user and server
-* **Sharing** → images are neatly stored for reuse and collaboration
-* **Practicality** → the script solves a real-world problem in a simple way
+* **Community** → downloading from the web connects us globally
+* **Respect** → polite requests and clean error handling
+* **Sharing** → images neatly stored for later use
+* **Practicality** → a simple, useful real-world tool
 
 ---
 
 ## 📝 License
 
 This project is for educational purposes.
-Inspired by the Ubuntu philosophy: *"A person is a person through other persons."*
-
-```
+Inspired by Ubuntu: *"A person is a person through other persons."*
